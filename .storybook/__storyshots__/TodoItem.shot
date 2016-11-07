@@ -1,0 +1,13 @@
+exports[`Complete`] = `
+<li
+  className="complete">
+  Complete
+</li>
+`;
+
+exports[`Not Complete`] = `
+<li
+  className="">
+  Not Complete
+</li>
+`;

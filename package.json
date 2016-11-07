@@ -10,11 +10,14 @@
     "webpack": "webpack",
     "webpack:watch": "webpack --watch",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "test-storybook": "storyshots"
   },
   "author": "CodeSheep Team",
   "license": "ISC",
   "devDependencies": {
+    "@kadira/storybook": "^2.21.0",
+    "@kadira/storyshots": "^2.0.2",
     "babel": "^6.5.2",
     "babel-cli": "^6.16.0",
     "babel-loader": "^6.2.5",
@@ -29,8 +32,7 @@
     "path": "^0.12.7",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2",
-    "webpack-dev-server": "^1.16.1",
-    "@kadira/storybook": "^2.21.0"
+    "webpack-dev-server": "^1.16.1"
   },
   "dependencies": {
     "react": "^15.3.2",
