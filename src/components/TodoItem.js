@@ -10,7 +10,7 @@ const TodoInput = props => (
       }
     )}
   >
-    {props.text} :)
+    {props.text}
   </li>
 )
 
