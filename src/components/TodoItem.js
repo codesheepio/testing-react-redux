@@ -1,7 +1,17 @@
 import React, { PropTypes } from 'react'
+import classNames from 'classnames'
 
 const TodoInput = props => (
-  <li className={props.complete ? 'complete' : ''}>{props.text} :)</li>
+  <li
+    className={classNames(
+      'todo-item',
+      {
+        complete: props.complete,
+      }
+    )}
+  >
+    {props.text} :)
+  </li>
 )
 
 TodoInput.propTypes = {

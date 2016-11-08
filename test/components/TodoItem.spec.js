@@ -8,5 +8,6 @@ describe('TodoItem', () => {
   it('should render correct structure', () => {
     wrapper = shallow(<TodoItem text="Hello" />)
     expect(wrapper).to.have.tagName('li')
+    expect(wrapper).to.have.className('todo-item')
   })
 })
