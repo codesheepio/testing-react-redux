@@ -1,15 +1,13 @@
 exports[`Complete`] = `
 <li
-  className="complete">
+  className="todo-item complete">
   Complete
-   :)
 </li>
 `;
 
 exports[`Not Complete`] = `
 <li
-  className="">
+  className="todo-item">
   Not Complete
-   :)
 </li>
 `;
