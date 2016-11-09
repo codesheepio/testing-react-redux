@@ -1,0 +1,13 @@
+exports[`with todos`] = `
+<ul
+  className="todo-list">
+  <li
+    className="todo-item">
+    Feed cat
+  </li>
+  <li
+    className="todo-item complete">
+    Drink
+  </li>
+</ul>
+`;
