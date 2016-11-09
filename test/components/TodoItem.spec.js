@@ -3,16 +3,30 @@ import { expect, shallow } from '../testHelper'
 import TodoItem from '../../src/components/TodoItem'
 
 describe('TodoItem', () => {
+  let wrapper
+  let props
+
+  beforeEach(() => {
+    props = { text: 'Hello', complete: false }
+    wrapper = shallow(<TodoItem {...props} />)
+  })
+
   it('should render correct structure', () => {
-    const wrapper = shallow(<TodoItem text="Hello" />)
     expect(wrapper).to.have.tagName('li')
     expect(wrapper).to.have.className('todo-item')
   })
 
   it('should show text prop', () => {
-    let wrapper = shallow(<TodoItem text="Hello" />)
     expect(wrapper).to.have.text('Hello')
-    wrapper = shallow(<TodoItem text="World" />)
+
+    props.text = 'World'
+    wrapper.setProps(props)
     expect(wrapper).to.have.text('World')
+  })
+
+  it('should render complete class', () => {
+    props.complete = true
+    wrapper.setProps(props)
+    expect(wrapper).to.have.className('complete')
   })
 })
