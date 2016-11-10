@@ -5,15 +5,23 @@ class NewTodo extends Component {
     super(props)
     this.state = { text: '' }
     this.typeHandler = this.typeHandler.bind(this)
+    this.clickHandler = this.clickHandler.bind(this)
   }
+
   typeHandler(event) {
     this.setState({ text: event.target.value })
   }
+
+  clickHandler() {
+    this.props.addTodo(this.state.text)
+    this.setState({ text: '' })
+  }
+
   render() {
     return (
       <div className="new-todo">
         <input onChange={this.typeHandler} value={this.state.text} />
-        <button className="btn btn-primary">Add</button>
+        <button onClick={this.clickHandler} className="btn btn-primary">Add</button>
       </div>
     )
   }

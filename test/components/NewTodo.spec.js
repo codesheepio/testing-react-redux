@@ -27,4 +27,10 @@ describe('NewTodo', () => {
     wrapper.find('input').simulate('change', { target: { value: 'Hello' } })
     expect(wrapper).to.have.state('text', 'Hello')
   })
+
+  it('calls props.addTodo when clicking Add button', () => {
+    wrapper.setState({ text: 'Hello' })
+    wrapper.find('button').simulate('click')
+    expect(props.addTodo).to.have.been.calledWith('Hello')
+  })
 })
