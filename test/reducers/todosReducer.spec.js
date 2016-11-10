@@ -16,7 +16,7 @@ describe('todosReducer', () => {
     expect(nextState).to.deep.equal(curState)
   })
 
-  it('adds todos when receviing ADD_TODO action', () => {
+  it('adds todos when receiving ADD_TODO action', () => {
     const curState = [
       { id: 1, text: 'Feed cat', complete: false },
     ]
