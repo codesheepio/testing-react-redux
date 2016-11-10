@@ -1,0 +1,13 @@
+exports[` 1`] = `
+<div
+  className="new-todo">
+  <input
+    onChange={[Function]}
+    value="" />
+  <button
+    className="btn btn-primary"
+    onClick={[Function]}>
+    Add
+  </button>
+</div>
+`;
