@@ -11,4 +11,8 @@ TodoList.propTypes = {
   todos: PropTypes.arrayOf(PropTypes.object),
 }
 
+TodoList.defaultProps = {
+  todos: [],
+}
+
 export default TodoList
