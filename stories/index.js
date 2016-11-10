@@ -1,7 +1,8 @@
 import React from 'react'
-import { storiesOf } from '@kadira/storybook' // eslint-disable-line
+import { storiesOf } from '@kadira/storybook' // eslint-disable-line import/no-extraneous-dependencies
 import TodoItem from '../src/components/TodoItem'
 import TodoList from '../src/components/TodoList'
+import NewTodo from '../src/components/NewTodo'
 import '../src/style.css'
 
 storiesOf('TodoItem', module)
@@ -20,3 +21,8 @@ storiesOf('TodoList', module)
     ]
     return <TodoList todos={todos} />
   })
+
+storiesOf('NewTodo', module)
+  .add('', () => (
+    <NewTodo addTodo={() => {}} />
+  ))
