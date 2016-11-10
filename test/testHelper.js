@@ -2,8 +2,11 @@ import chai, { expect } from 'chai'
 import chaiEnzyme from 'chai-enzyme'
 import { shallow, mount, render } from 'enzyme'
 import { jsdom } from 'jsdom'
+import sinon from 'sinon'
+import sinonChai from 'sinon-chai'
 
 chai.use(chaiEnzyme())
+chai.use(sinonChai)
 
 global.document = jsdom('')
 global.window = document.defaultView
@@ -22,4 +25,5 @@ export {
   shallow,
   mount,
   render,
+  sinon,
 }
